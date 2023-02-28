@@ -1,0 +1,31 @@
+/* global */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: rgb(220, 167, 167);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;   /*this will center the div*/
+  padding: 20px;    /*this will give space between the border and the content*/
+  width: 100%;      /*this will set the width of the div to 100% of the parent*/
+  max-width: 500px; /*this will set the max width of the div to 500px*/
+  top: 200px;
+  position: relative;
+}
+
+
+
+/* */
+
+/* main */
+
+/* footer */
+
+/* Path: reset.css */
+
