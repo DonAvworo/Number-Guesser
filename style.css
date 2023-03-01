@@ -1,9 +1,10 @@
 /* global */
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  font-size: 16px;  /*this will set the font size of the body to 16px*/
+  line-height: 1.5; /*this will set the line height of the body to 1.5 times the font size*/
+  color: #333;    /*this will set the color of the body to black*/
+  height: 100vh;    /*this will set the height of the body to 100% of the parent*/
   background-color: rgb(220, 167, 167);
 }
 
@@ -15,10 +16,51 @@ body {
   padding: 20px;    /*this will give space between the border and the content*/
   width: 100%;      /*this will set the width of the div to 100% of the parent*/
   max-width: 500px; /*this will set the max width of the div to 500px*/
-  top: 200px;
-  position: relative;
+  height: 100%;     /*this will set the height of the div to 100% of the parent*/
+  max-height: 500px;/*this will set the max height of the div to 500px*/
+  /* position: relative; */
 }
 
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  left: 200px;
+}
+
+.number-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.number-box input {
+  width: 40%;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
 
 
 /* */
