@@ -60,9 +60,9 @@ body {
 }
 
 .number-box input {
-  width: 40%;
+  width: 20%;
   height: 50px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 10px;
