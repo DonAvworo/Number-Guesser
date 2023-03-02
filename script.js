@@ -1,14 +1,14 @@
 // create a click event for the Generate button
 
-let random = Math.floor(Math.random() * 100) + 1;     //generate a random number
-
 let generate = document.getElementById("generate-btn") // get the generate button
 generate.addEventListener("click", function() {
 
     alert("You clicked the button!")                        //text purpose only
-    // let random = Math.floor(Math.random() * 100) + 1;       //generate a random number
+    let random = Math.floor(Math.random() * 100) + 1;       //generate a random number
     let output = document.getElementById("result-info");    //get the output element
+    let output2 = document.getElementById("result");        //get the output element
     output.innerHTML = random;                              //display the random number
+    output2.innerHTML = random;                             //display the random number
     console.log(random);                                    //display the random number in the console
 
     if (random == 43 && random == 39 && random == 5) {               //if the number is divisible by 3 and 5
@@ -40,12 +40,21 @@ guess.addEventListener("click", function() {
     alert("You clicked the button!") //text purpose only
 
     let guess = document.getElementById("number").value; //get the user's guess
-    // let random = Math.floor(Math.random() * 100) + 1;   //generate a random number
-    let output = document.getElementById("result");     //get the output element
+    let random = Math.floor(Math.random() * 100) + 1;   //generate a random number
+    let output = document.getElementById("result-info");     //get the output element
+    let output2 = document.getElementById("result");     //get the output element
+
 
     if (guess == random) {                          //if the guess is correct
         output.innerHTML = "You guessed it!";       //display a message
     } 
+    if (random == 43 && random == 39 && random == 5) {               //if the number is divisible by 3 and 5
+        output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
+    }
+    else if (random % 3 == 0 && random % 5 == 0) {               //if the number is divisible by 3 and 5
+        output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
+    }
+
     else {                                                       //otherwise
         output.innerHTML = "Sorry, the number was " + random;    //display the number
     } 
