@@ -1,15 +1,15 @@
 // create a click event for the Generate button
 
-let generate = document.getElementById("generate-btn") // get the generate button
+let generate = document.getElementById("generate-btn")      // get the generate button
 generate.addEventListener("click", function() {
 
-    alert("You clicked the button!")                        //text purpose only
+    // alert("You clicked the button!")                     //text purpose only
     let random = Math.floor(Math.random() * 100) + 1;       //generate a random number
     let output = document.getElementById("result-info");    //get the output element
     let output2 = document.getElementById("result");        //get the output element
     output.innerHTML = random;                              //display the random number
     output2.innerHTML = random;                             //display the random number
-    console.log(random);                                    //display the random number in the console
+    // console.log(random);                                    //display the random number in the console
 
     if (random == 43 && random == 39 && random == 5) {               //if the number is divisible by 3 and 5
         output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
@@ -20,10 +20,11 @@ generate.addEventListener("click", function() {
     }
 
     else {                                  //otherwise
-        output.innerHTML = "Sorry, the number was " + random;         //display the number
+        //output.innerHTML = "Sorry, the number was " + random;         //display the number
+        output.innerHTML = "Sorry, you didn't get it!. Try again!"; 
     }
   }
-
+  
 )
 
 // in the above code:
@@ -37,26 +38,26 @@ generate.addEventListener("click", function() {
 let guess = document.getElementById("guess-btn") // get the guess button
 guess.addEventListener("click", function() { 
 
-    alert("You clicked the button!") //text purpose only
+    // alert("You clicked the button!") //text purpose only
 
-    let guess = document.getElementById("number").value; //get the user's guess
-    let random = Math.floor(Math.random() * 100) + 1;   //generate a random number
-    let output = document.getElementById("result-info");     //get the output element
-    let output2 = document.getElementById("result");     //get the output element
+    let userInput = document.getElementById("number").value     //get the user's guess
+    // let guess = parseInt(userInput); //convert the user's guess to a number
+    let output = document.getElementById("result-info");        //get the output element
+    let output2 = document.getElementById("result");            //get the output element
+    output.innerHTML = userInput;                               //display the random number
+    output2.innerHTML = userInput;   
 
 
-    if (guess == random) {                          //if the guess is correct
-        output.innerHTML = "You guessed it!";       //display a message
-    } 
-    if (random == 43 && random == 39 && random == 5) {               //if the number is divisible by 3 and 5
-        output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
+    if (userInput == 43 && userInput == 39 && userInput == 5) {         //if the number is divisible by 3 and 5
+        output.innerHTML = "Yass!!! You Got It!";                       //display FizzBuzz
     }
-    else if (random % 3 == 0 && random % 5 == 0) {               //if the number is divisible by 3 and 5
-        output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
+    else if (userInput % 3 == 0 && userInput % 5 == 0) {                //if the number is divisible by 3 and 5
+        output.innerHTML = "Yass!!! You Got It!";                       //display FizzBuzz
     }
 
-    else {                                                       //otherwise
-        output.innerHTML = "Sorry, the number was " + random;    //display the number
+    else {                                                              //otherwise
+        //output.innerHTML = "Sorry, the number was " + random;         //display the number
+        output.innerHTML = "Sorry, you didn't get it!. Try again!";
     } 
 
   }
@@ -71,31 +72,4 @@ reset.addEventListener("click", function() {
 
   }
 ); 
-
-
-
-
-
-
-
-
-
-
-
-
-// let guess = document.getElementById("guess").value; //get the user's guess
-// let random = Math.floor(Math.random() * 100) + 1;   //generate a random number
-// let output = document.getElementById("number");     //get the output element
-
-// guess.addEventListener("click", function() {        //when the button is clicked
-//     if (guess == random) {                          //if the guess is correct
-//         output.innerHTML = "You guessed it!";       //display a message
-//     } else {                                        //otherwise
-//         output.innerHTML = "Sorry, the number was " + random; //display the number
-//     }
-// });
-
-// create a click event for the Reset button
-
-// create a function to generate a random number
 
