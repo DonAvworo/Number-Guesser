@@ -1,5 +1,4 @@
 // create a click event for the Generate button
-
 let generate = document.getElementById("generate-btn")      // get the generate button
 generate.addEventListener("click", function() {
 
@@ -26,7 +25,6 @@ generate.addEventListener("click", function() {
   }
   
 )
-
 // in the above code:
 // Math.random() * 100 generates a random number between 0 and 100
 // Math.floor() rounds the number down to the nearest integer ie 1.9 becomes 1
@@ -64,11 +62,15 @@ guess.addEventListener("click", function() {
 );
 
 // create a click event for the Reset button
-
 let reset = document.getElementById("reset-btn") // get the reset button
 reset.addEventListener("click", function() {
 
-    alert("You clicked the button!") //text purpose only
+    // alert("You clicked the button!") //text purpose only
+
+    let clearNum = document.getElementById("number").value = ""; //clear the input field
+    let clearOutput = document.getElementById("result").value = "";          //clear the output field
+
+
 
   }
 ); 
