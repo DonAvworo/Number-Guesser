@@ -1,4 +1,4 @@
-// create a click event for the Generate button
+// create a click event and function for the Generate button
 let generate = document.getElementById("generate-btn")      // get the generate button
 generate.addEventListener("click", function() {
 
@@ -11,11 +11,11 @@ generate.addEventListener("click", function() {
     // console.log(random);                                    //display the random number in the console
 
     if (random == 43 && random == 39 && random == 5) {               //if the number is divisible by 3 and 5
-        output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
+        output.innerHTML = "Yass!!! You Got It Try another number!";                      //display FizzBuzz
     }
 
     else if (random % 3 == 0 && random % 5 == 0) {               //if the number is divisible by 3 and 5
-        output.innerHTML = "Yass!!! You Got It!";                      //display FizzBuzz
+        output.innerHTML = "Yass!!! You Got It! Go you!!!";                      //display FizzBuzz
     }
 
     else {                                  //otherwise
@@ -32,7 +32,6 @@ generate.addEventListener("click", function() {
 //...because arrays start at 0 and end at 99 so we need to add 1 to the range
 
 // create a click event for the Guess button
-
 let guess = document.getElementById("guess-btn") // get the guess button
 guess.addEventListener("click", function() { 
 
@@ -47,10 +46,10 @@ guess.addEventListener("click", function() {
 
 
     if (userInput == 43 && userInput == 39 && userInput == 5) {         //if the number is divisible by 3 and 5
-        output.innerHTML = "Yass!!! You Got It!";                       //display FizzBuzz
+        output.innerHTML = "Yass!!! You Got It! e = mc2";                       //display FizzBuzz
     }
     else if (userInput % 3 == 0 && userInput % 5 == 0) {                //if the number is divisible by 3 and 5
-        output.innerHTML = "Yass!!! You Got It!";                       //display FizzBuzz
+        output.innerHTML = "Yass!!! You Got It! You are a superstar";                       //display FizzBuzz
     }
 
     else {                                                              //otherwise
@@ -61,17 +60,24 @@ guess.addEventListener("click", function() {
   }
 );
 
-// create a click event for the Reset button
+// create a click event and function for the Reset button
 let reset = document.getElementById("reset-btn") // get the reset button
 reset.addEventListener("click", function() {
 
     // alert("You clicked the button!") //text purpose only
-
-    let clearNum = document.getElementById("number").value = ""; //clear the input field
-    let clearOutput = document.getElementById("result").value = "";          //clear the output field
-
-
+    // reset(); //call the reset function (see below
+    let clearNumber = document.getElementById("number").value = ""; //clear the number input
+    let clearResult = document.getElementById("result-info").innerHTML = "Click on Next Stage to play another game"; //clear the result
+    let clearResult2 = document.getElementById("result").innerHTML = "Click Generate or enter number to Play Again"; //clear the result
 
   }
 ); 
 
+// create a click event and function for the Next Stage button
+
+let nextStage = document.getElementById("next-btn") // get the next stage button
+nextStage.addEventListener("click", function() {
+    
+        alert("We are working hard to bring you more games. Please check back later!")     
+    }
+);
